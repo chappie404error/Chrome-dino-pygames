@@ -76,12 +76,12 @@ while True:
         else:
             if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
                 game_active = True
-                bird_rect.left = 800
-                cactus1_rect1.left = 1000
-                cactus1_rect2.left = 1000
-                cactus1_rect3.left = 1000
-                cactus1_rect4.left = 1000
-                cactus1_rect5.left = 1000
+                bird_rect.left = random.randint(3000,10000)
+                cactus1_rect1.left = random.randint(3000,10000)
+                cactus1_rect2.left = random.randint(3000,10000)
+                cactus1_rect3.left = random.randint(3000,10000)
+                cactus1_rect4.left = random.randint(3000,10000)
+                cactus1_rect5.left = random.randint(3000,10000)
 
 
 
@@ -126,9 +126,9 @@ while True:
         screen.blit(dino, dino_rect)
 
 # BIRD
-        bird_rect.x -= 4
+        bird_rect.x -= 8
         if bird_rect.right <= 0:
-            bird_rect.left = random.randint(1500,5000)
+            bird_rect.left = random.randint(10000,15000)
         screen.blit(bird, bird_rect)
 # CACTUS
         cactus1_rect1.x -= 10
